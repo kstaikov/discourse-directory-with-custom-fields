@@ -1,0 +1,32 @@
+{{#d-section pageClass="foos"}}
+  <h1>{{i18n "foos.title"}}</h1>
+<div class='container'>
+  <table class="groups-table">
+    <thead>
+        <th>User</th>
+        <th>Building</th>
+        <th>Unit #</th>
+        <th>Full</th>
+    </thead>
+
+    <tbody>
+        {{#each foos as |foo|}}
+            <tr>
+                <td>
+                    {{user-info user=foo}}
+                </td>
+                <td>
+                    {{ foo.custom_fields.user_field_1 }}
+                </td>
+                <td>
+                    {{ foo.custom_fields.user_field_2 }}
+                </td>
+                <td>
+                    {{ foo.custom_fields.user_field_3 }}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+  </table>
+</div>
+{{/d-section}}
