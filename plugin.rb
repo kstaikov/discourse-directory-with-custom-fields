@@ -1,6 +1,6 @@
 # name: new-dir
 # about: New directory with custom fields.
-# version: 0.0.1
+# version: 0.1
 # authors: Kiril Staikov
 
 
@@ -8,7 +8,7 @@ after_initialize do
     #require_dependency 'application_controller'
     
     class ::PluginUserDirSerializer < ::BasicUserSerializer
-      attributes :name, :title, :custom_fields, :user_fields
+      attributes :name, :email, :custom_fields, :user_fields
     end
 
     class ::PluginUserFieldMapSerializer < ::ApplicationSerializer
@@ -18,7 +18,7 @@ after_initialize do
     class ::FoosController < ::ApplicationController
 
       def index
-        result = User.where("id > 0")
+        result = User.human_users
         field_map = UserField.select('*')
 
         render_json_dump(foos: serialize_data(result, PluginUserDirSerializer), field_map: serialize_data(field_map, PluginUserFieldMapSerializer))
