@@ -1,32 +1,32 @@
 {{#d-section pageClass="newdirs"}}
   <h1>{{i18n "newdirs.title"}}</h1>
 <div class='container'>
-  <table class="groups-table">
+<div class='directory'>
+  <table>
     <thead>
         <th>User</th>
-        <th>Building</th>
         <th>Unit #</th>
-        <th>Full</th>
+        <th>Phone #</th>
+        <th>Email</th>
     </thead>
 
     <tbody>
         {{#each newdirs as |newdir|}}
             <tr>
-                <td>
+                <td style="width: 200px">
                     {{user-info user=newdir}}
                 </td>
-                <td>
-                    {{ newdir.custom_fields.user_field_1 }}
-                </td>
-                <td>
-                    {{ newdir.custom_fields.user_field_2 }}
-                </td>
-                <td>
+                <td style="width: 200px">
                     {{ newdir.custom_fields.user_field_3 }}
+                </td>
+                <td style="width: 200px"></td>
+                <td style="width: 200px">
+                    {{ newdir.email }}
                 </td>
             </tr>
         {{/each}}
     </tbody>
   </table>
+</div>
 </div>
 {{/d-section}}

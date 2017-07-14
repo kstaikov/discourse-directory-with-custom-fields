@@ -1,11 +1,8 @@
-- rename newdirs to... directory?
-- style touchup/css
-
-
 To Launch
 =========
 - replace user_field_3 with whatever the actual one i need is.
 - mimic same fields as in 307adair, same order.  make sure it works.
+- how does it look on mobile?
 
 Nice to have for 0.2
 ============
@@ -14,3 +11,4 @@ Nice to have for 0.2
 - Configure in admin which fields to display on the directory and accomplish that.
 - Figure out what to do with the fields exactly - building and # separate?  Joined later?
 - Add sortability on all fields on the frontend
+- do css styling.
