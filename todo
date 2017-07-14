@@ -1,0 +1,16 @@
+- rename foos to... directory?
+- style touchup/css
+
+
+To Launch
+=========
+- replace user_field_3 with whatever the actual one i need is.
+- mimic same fields as in 307adair, same order.  make sure it works.
+
+Nice to have for 0.2
+============
+- search by user/name
+- Figure out if i can get the field map in... how.  accessible on the front end.  ajax call instead?  Display on directory whatever we get here.
+- Configure in admin which fields to display on the directory and accomplish that.
+- Figure out what to do with the fields exactly - building and # separate?  Joined later?
+- Add sortability on all fields on the frontend
