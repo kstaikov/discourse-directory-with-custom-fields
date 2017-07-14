@@ -1,5 +1,5 @@
-{{#d-section pageClass="foos"}}
-  <h1>{{i18n "foos.title"}}</h1>
+{{#d-section pageClass="newdirs"}}
+  <h1>{{i18n "newdirs.title"}}</h1>
 <div class='container'>
   <table class="groups-table">
     <thead>
@@ -10,19 +10,19 @@
     </thead>
 
     <tbody>
-        {{#each foos as |foo|}}
+        {{#each newdirs as |newdir|}}
             <tr>
                 <td>
-                    {{user-info user=foo}}
+                    {{user-info user=newdir}}
                 </td>
                 <td>
-                    {{ foo.custom_fields.user_field_1 }}
+                    {{ newdir.custom_fields.user_field_1 }}
                 </td>
                 <td>
-                    {{ foo.custom_fields.user_field_2 }}
+                    {{ newdir.custom_fields.user_field_2 }}
                 </td>
                 <td>
-                    {{ foo.custom_fields.user_field_3 }}
+                    {{ newdir.custom_fields.user_field_3 }}
                 </td>
             </tr>
         {{/each}}

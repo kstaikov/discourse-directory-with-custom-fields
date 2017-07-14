@@ -1,10 +1,10 @@
 export default Discourse.Route.extend({
   titleToken() {
-    return I18n.t('foos.title');
+    return I18n.t('newdirs.title');
   },
 
   model(params) {
-    return this.store.findAll('foo', params);
+    return this.store.findAll('newdir', params);
   },
 
   setupController(controller, model) {
@@ -32,6 +32,6 @@ export default Discourse.Route.extend({
 
         return 0;
     });
-    controller.set('foos', model);
+    controller.set('newdirs', model);
   }
 });

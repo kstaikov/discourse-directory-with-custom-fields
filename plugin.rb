@@ -15,17 +15,17 @@ after_initialize do
         attributes :id, :name, :description
     end
 
-    class ::FoosController < ::ApplicationController
+    class ::NewdirsController < ::ApplicationController
 
       def index
         result = User.human_users
         field_map = UserField.select('*')
 
-        render_json_dump(foos: serialize_data(result, PluginUserDirSerializer), field_map: serialize_data(field_map, PluginUserFieldMapSerializer))
+        render_json_dump(newdirs: serialize_data(result, PluginUserDirSerializer), field_map: serialize_data(field_map, PluginUserFieldMapSerializer))
       end
     end
 
     Discourse::Application.routes.append do
-      resources :foos
+      resources :newdirs
     end
 end
