@@ -1,9 +1,3 @@
-To Launch
-=========
-- mimic same fields as in 307adair, same order.  make sure it works.
-- replace user_field_3 with whatever the actual one i need is.
-- how does it look on mobile?
-
 Nice to have for 0.2
 ============
 - search by user/name
@@ -12,3 +6,7 @@ Nice to have for 0.2
 - Figure out what to do with the fields exactly - building and # separate?  Joined later?
 - Add sortability on all fields on the frontend
 - do css styling.
+- prettify mobile a bit.
+- if people are in the same unit they share a directory row.
+- Maybe a separate plugin for townhomes specifically - automatically creates the unit/building/phone etc. fields.
+- Maybe an owner field.
