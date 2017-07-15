@@ -1,7 +1,37 @@
-  <div class="container">
-    <div class='directory'>
-          {{#each newdirs as |item|}}
-            {{directory-item tagName="div" class="user" item=item }}
-          {{/each}}
-    </div>
-  </div>
+{{#d-section pageClass="newdirs"}}
+  <br/>
+  <h1>{{i18n "newdirs.title"}}</h1>
+<div class='container'>
+<div class='directory'>
+  <table>
+
+    <tbody>
+        {{#each newdirs as |newdir|}}
+        <div class='user' style='border-top: 0; padding: 0'>
+            <tr>
+                <td style='display: inline-grid; width:70%'>
+                    {{user-info user=newdir}}
+                    <div class='user-stat'>
+                        <span class='label'>Phone</span>
+                        <span class='value'>
+                            {{ newdir.custom_fields.user_field_4 }}
+                        </span>
+                    </div>
+                    <div class='user-stat'>
+                        <span class='label'>Email</span>
+                        <span class='value'>
+                            {{ newdir.email }}
+                        </span>
+                    </div>
+                </td>
+                <td style='display: inline-grid; font-size: x-large; border: none'>
+                    {{ newdir.custom_fields.user_field_3 }}
+                </td>
+            </tr>
+        </div>
+        {{/each}}
+    </tbody>
+  </table>
+</div>
+</div>
+{{/d-section}}
