@@ -18,7 +18,7 @@ after_initialize do
     class ::NewdirsController < ::ApplicationController
 
       def index
-        result = User.human_users
+        result = User.human_users.where(active: true).where('username NOT LIKE :query', query: 'anon%')
         field_map = UserField.select('*')
 
         render_json_dump(newdirs: serialize_data(result, PluginUserDirSerializer), field_map: serialize_data(field_map, PluginUserFieldMapSerializer))
